@@ -1,0 +1,22 @@
+<div class="flex">
+  <div class="relative w-full">
+    <input matInput type="text" [formControl]="searchPosts"
+           class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+           placeholder="Busqueda de asuntos por asunto" required>
+  </div>
+</div>
+<div class="flex flex-wrap">
+  <div *ngFor="let post of getPosts" class="w-full ssm:w-1/2 md:w-1/3 2xl:w-1/4 text-center terminal">
+    <div class="console">
+      <mat-card-header style="color: white">
+        <mat-card-title>{{post.idFolio}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content style="color: white">
+        <p>{{post.idRastreo}}</p>
+      </mat-card-content>
+      <mat-card-content style="color: white">
+        <p>{{post.asunto}}</p>
+      </mat-card-content>
+    </div>
+  </div>
+</div>
